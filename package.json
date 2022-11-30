@@ -5,11 +5,12 @@
   "main": "server.js",
   "scripts": {
     "start:dev": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "",
+    "start": "concurrently \"npm run server\" \"npm run client:prod\"",
     "server": "npm run server --prefix server",
     "build": "",
     "install": "",
-    "client": "npm run dev --prefix client"
+    "client": "npm run dev --prefix client",
+    "client:prod": "npm run build --prefix client"
   },
   "keywords": [],
   "author": "",
